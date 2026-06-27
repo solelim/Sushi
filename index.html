@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Суші з доставкою в Києві | RA SUSHI — свіжі роли та сети</title>
+<meta name="description" content="Замовляйте свіжі суші та роли з доставкою по Києву за 60 хвилин. Преміум-риба, авторські сети, зручне замовлення онлайн.">
+<meta property="og:title" content="RA SUSHI — суші з доставкою по Києву">
+<meta property="og:description" content="Свіжі суші з характером. Доставка за 60 хвилин, безкоштовно від 1000 грн.">
+<meta property="og:type" content="website">
+<style>
+  html,body{margin:0;padding:0;background:#101216;}
+  body{-webkit-font-smoothing:antialiased;}
+</style>
+</head>
+<body>
+
+<div class="sushi-promo-bar" id="sushi-promo-bar" style="display:none">
+  <span class="sushi-promo-shine"></span>
+  <span id="sushi-promo-text"></span>
+  <button class="sushi-promo-close" id="sushi-promo-close" aria-label="Закрити">&times;</button>
+</div>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<div id="sushi-block">
+
+  <header class="sushi-nav" id="sushi-nav">
+    <div class="sushi-logo" id="sushi-logo">RA SUSHI</div>
+    <nav class="sushi-nav-links" id="sushi-nav-links">
+      <a href="#sushi-menu">Меню</a>
+      <a href="#sushi-delivery">Доставка</a>
+      <a href="#sushi-contacts">Контакти</a>
+    </nav>
+    <button class="sushi-nav-cart" id="sushi-cart-open-top" aria-label="Кошик">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle><path d="M2 3h3l2.4 12.4a1.5 1.5 0 0 0 1.5 1.2h8.7a1.5 1.5 0 0 0 1.5-1.2L22 7H6"></path></svg>
+      <span class="sushi-nav-cart-txt">Кошик</span>
+      <span class="sushi-nav-count" id="sushi-nav-count">0</span>
+    </button>
+  </header>
+
+  <section class="sushi-hero" id="sushi-hero">
+    <div class="sushi-hero-bg" id="sushi-hero-bg"></div>
+    <div class="sushi-promo-sticker" id="sushi-promo-sticker" style="display:none" aria-hidden="true">
+      <svg class="sushi-sticker-spin" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="sushiCircPath" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"></path></defs><text class="sushi-sticker-txt"><textPath href="#sushiCircPath" xlink:href="#sushiCircPath" startOffset="0">ЗНИЖКА ДНЯ • СЬОГОДНІ • ВИГІДНО • </textPath></text></svg>
+      <span class="sushi-sticker-num">-20%</span>
+    </div>
+    <div class="sushi-hero-inner">
+      <span class="sushi-eyebrow" id="sushi-eyebrow">Доставка по Києву</span>
+      <h1 class="sushi-title" id="sushi-title"></h1>
+      <p class="sushi-subtitle" id="sushi-subtitle"></p>
+      <div class="sushi-hero-cta">
+        <a class="sushi-btn sushi-btn-primary" href="#sushi-menu" id="sushi-hero-btn1">Обрати сет</a>
+        <a class="sushi-btn sushi-btn-ghost" id="sushi-hero-btn2" href="#">Подзвонити</a>
+      </div>
+      <ul class="sushi-badges" id="sushi-badges"></ul>
+    </div>
+  </section>
+
+  <section class="sushi-adv" id="sushi-adv"></section>
+
+  <section class="sushi-menu" id="sushi-menu">
+    <div class="sushi-sec-head">
+      <span class="sushi-eyebrow" id="sushi-menu-eyebrow">Наше меню</span>
+      <h2 class="sushi-sec-title" id="sushi-menu-title">Обирайте улюблене</h2>
+    </div>
+    <div class="sushi-tabs" id="sushi-tabs"></div>
+    <div class="sushi-grid" id="sushi-grid"></div>
+  </section>
+
+  <section class="sushi-delivery" id="sushi-delivery">
+    <div class="sushi-sec-head">
+      <span class="sushi-eyebrow">Як замовити</span>
+      <h2 class="sushi-sec-title" id="sushi-del-title">Доставка та оплата</h2>
+    </div>
+    <div class="sushi-steps" id="sushi-steps"></div>
+    <div class="sushi-del-info" id="sushi-del-info"></div>
+  </section>
+
+  <section class="sushi-contacts" id="sushi-contacts">
+    <div class="sushi-contacts-grid">
+      <div class="sushi-contacts-col">
+        <span class="sushi-eyebrow">Контакти</span>
+        <h2 class="sushi-sec-title" id="sushi-cont-title">Завжди на зв'язку</h2>
+        <div class="sushi-cont-list" id="sushi-cont-list"></div>
+        <div class="sushi-social" id="sushi-social"></div>
+      </div>
+      <div class="sushi-contacts-map" id="sushi-contacts-map"></div>
+    </div>
+  </section>
+
+  <footer class="sushi-footer" id="sushi-footer"></footer>
+
+  <script type="application/ld+json" id="sushi-jsonld"></script>
+
+  <script>
+  (function(){
+    "use strict";
+
+    /* ============================================================
+       CONFIG — ВЕСЬ КОНТЕНТ ТУТ
+       ============================================================ */
+    var CONFIG = {
+
+      brand: {
+        name:  "RA SUSHI",                 /* ЗМІНИТИ: назва */
+        phone: "+380441234567",            /* ЗМІНИТИ: телефон (для дзвінка/SEO) */
+        phoneText: "+38 (044) 123-45-67",  /* ЗМІНИТИ: як телефон показувати */
+        city:  "Київ",                     /* ЗМІНИТИ: місто */
+        address: "вул. Хрещатик, 1, Київ",  /* ЗМІНИТИ: адреса (або зона доставки) */
+        hours: "Щодня 10:00 - 22:00"        /* ЗМІНИТИ: графік */
+      },
+
+      telegram: {
+        token:  "8822933699:AAHRUNHIL63jwbvIAlXd4roNba11eAT9FrU", /* вже вписано */
+        chatId: "400889980"                                       /* вже вписано */
+      },
+
+      /* ЗНИЖКА ДНЯ: вау-банер з таймером + стікер у hero + знижка в кошику.
+         enabled:false — вимкнути все одним рядком. */
+      promo: {
+        enabled: true,        /* ЗМІНИТИ: true/false */
+        percent: 20,          /* ЗМІНИТИ: розмір знижки, % */
+        code:    "RA20",      /* ЗМІНИТИ: промокод */
+        label:   "Знижка дня" /* ЗМІНИТИ: підпис */
+      },
+
+      /* посилання на соцмережі (порожнє "" = іконка ховається) */
+      social: {
+        instagram: "https://instagram.com/", /* ЗМІНИТИ або "" */
+        telegram:  "https://t.me/",          /* ЗМІНИТИ або "" */
+        facebook:  "",                       /* ЗМІНИТИ або "" */
+        viber:     ""                        /* ЗМІНИТИ або "" (формат viber://chat?number=...) */
+      },
+
+      hero: {
+        /* ВІДЕО ЗВЕРХУ (як ви робите суші). Працює один з варіантів:
+           - videoMp4: пряме посилання на .mp4 (НАЙКРАЩЕ, відео тла без звуку);
+           - youtubeId: лише ID ролика з YouTube (напр. "dQw4w9WgXcQ");
+           - якщо обидва порожні "" -> показується фото bgImage.
+           Відео завжди БЕЗ ЗВУКУ і на повтор (вимога браузерів для автозапуску). */
+        videoMp4:  "https://videos.pexels.com/video-files/855452/855452-uhd_1922_1440_15fps.mp4",  /* ЗМІНИТИ: посилання на ваш .mp4 або "" (зараз стоїть готове відео приготування суші) */
+        youtubeId: "",  /* ЗМІНИТИ: ID ролика YouTube або "" */
+        bgImage: "https://images.pexels.com/videos/855452/free-video-855452.jpg?auto=compress&cs=tinysrgb&w=1600", /* ЗМІНИТИ: фото hero (запасне / poster для відео) */
+        eyebrow: "Доставка по Києву за 60 хвилин",                 /* ЗМІНИТИ */
+        title:   "Свіжі суші з характером",                        /* ЗМІНИТИ */
+        accentWord: "суші",                                        /* ЗМІНИТИ: підсвічене слово (має бути в title) */
+        subtitle:"Готуємо щодня з рибою преміум-класу. Привеземо тепле, свіже та красиве просто до дверей.", /* ЗМІНИТИ */
+        btn1:    "Обрати сет",                                     /* ЗМІНИТИ */
+        btn2:    "Подзвонити",                                     /* ЗМІНИТИ */
+        badges:  ["Доставка 60 хв", "Безкоштовно від 1000 грн", "Свіже щодня"] /* ЗМІНИТИ: 3 короткі плашки */
+      },
+
+      /* переваги (іконка підставляється за порядком: 1-риба,2-годинник,3-подарунок,4-картка) */
+      advantages: [
+        { title:"Свіжі інгредієнти", text:"Риба та овочі щодня, нічого замороженого вчора" }, /* ЗМІНИТИ */
+        { title:"Швидка доставка",   text:"Привеземо за 60 хвилин по всьому Києву" },          /* ЗМІНИТИ */
+        { title:"Безкоштовно",       text:"Доставка безкоштовна при замовленні від 1000 грн" }, /* ЗМІНИТИ */
+        { title:"Зручна оплата",     text:"Готівка, картка кур'єру або онлайн" }                /* ЗМІНИТИ */
+      ],
+
+      /* категорії меню (id має збігатися з cat у товарах) */
+      categories: [
+        { id:"all",     label:"Усі" },        /* ЗМІНИТИ підписи за бажанням */
+        { id:"set",     label:"Сети" },
+        { id:"phil",    label:"Філадельфія" },
+        { id:"baked",   label:"Запечені" },
+        { id:"hot",     label:"Гарячі" },
+        { id:"classic", label:"Класичні" }
+      ],
+
+      /* ТОВАРИ: cat -> категорія, img -> фото саме цієї страви (заміни на свої!) */
+      products: [
+        { cat:"set",  img:"https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=800&q=80", name:"Сет «Токіо», 32 шт", desc:"Чотири роли для компанії", price:649 }, /* ЗМІНИТИ */
+        { cat:"set",  img:"https://images.unsplash.com/photo-1553621042-f6e147245754?w=800&q=80",   name:"Сет «Сакура», 24 шт", desc:"Збалансований мікс класики", price:549 },
+        { cat:"set",  img:"https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=800&q=80", name:"Сет «Осака», 40 шт", desc:"Великий набір на вечірку", price:799 },
+        { cat:"set",  img:"https://images.unsplash.com/photo-1564489563601-c53cfc451e93?w=800&q=80", name:"Сет «Філа мікс», 28 шт", desc:"Чотири види Філадельфії", price:689 },
+
+        { cat:"phil", img:"https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=800&q=80", name:"Філадельфія Класік", desc:"Лосось, крем-сир, огірок", price:285 },
+        { cat:"phil", img:"https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&q=80", name:"Філадельфія з вугрем", desc:"Вугор, крем-сир, соус унагі", price:329 },
+        { cat:"phil", img:"https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?w=800&q=80",   name:"Філадельфія Лайт", desc:"Лосось, крем-сир, без рису зверху", price:245 },
+        { cat:"phil", img:"https://images.unsplash.com/photo-1607301405390-d831c242f59b?w=800&q=80", name:"Філадельфія з тунцем", desc:"Тунець, крем-сир, авокадо", price:315 },
+
+        { cat:"baked",img:"https://images.unsplash.com/photo-1582450871972-ab5ca641643d?w=800&q=80", name:"Запечений з лососем", desc:"Лосось, сирна шапка, спайс-соус", price:269 },
+        { cat:"baked",img:"https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=800&q=80", name:"Запечений з креветкою", desc:"Креветка, сир, тобіко", price:289 },
+        { cat:"baked",img:"https://images.unsplash.com/photo-1553621042-f6e147245754?w=800&q=80",   name:"Запечений Камчатка", desc:"Краб, сирна шапка, унагі", price:299 },
+
+        { cat:"hot",  img:"https://images.unsplash.com/photo-1564489563601-c53cfc451e93?w=800&q=80", name:"Гарячий рол з лососем", desc:"У темпурі, хрустка скоринка", price:235 },
+        { cat:"hot",  img:"https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&q=80", name:"Темпура з креветкою", desc:"Креветка, сир, паніровка", price:259 },
+        { cat:"hot",  img:"https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=800&q=80", name:"Гарячий сирний", desc:"Подвійний сир, гриль", price:219 },
+
+        { cat:"classic",img:"https://images.unsplash.com/photo-1559410545-0bdcd187e0a6?w=800&q=80", name:"Каліфорнія з крабом", desc:"Краб, авокадо, тобіко", price:245 },
+        { cat:"classic",img:"https://images.unsplash.com/photo-1607301405390-d831c242f59b?w=800&q=80",name:"Каліфорнія з лососем", desc:"Лосось, авокадо, кунжут", price:255 },
+        { cat:"classic",img:"https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=800&q=80",name:"Дракон Унагі", desc:"Вугор, соус унагі, авокадо", price:320 },
+        { cat:"classic",img:"https://images.unsplash.com/photo-1582450871972-ab5ca641643d?w=800&q=80",name:"Спайсі лосось", desc:"Лосось, гострий соус, кунжут", price:229 },
+        { cat:"classic",img:"https://images.unsplash.com/photo-1553621042-f6e147245754?w=800&q=80",  name:"Макі з огірком", desc:"Легкий рол, огірок, норі", price:119 }
+      ],
+
+      delivery: {
+        steps: [
+          { t:"Обираєте страви", d:"Додайте улюблені роли та сети в кошик" },     /* ЗМІНИТИ */
+          { t:"Лишаєте контакти", d:"Ім'я та телефон — ми передзвонимо за хвилину" },
+          { t:"Отримуєте за 60 хв", d:"Привеземо тепле та свіже до ваших дверей" }
+        ],
+        freeFrom: "Безкоштовна доставка при замовленні від 1000 грн", /* ЗМІНИТИ */
+        areas: "Доставляємо у всі райони Києва: Поділ, Оболонь, Позняки, Осокорки, Печерськ, Троєщина та інші.", /* ЗМІНИТИ */
+        pay: "Оплата: готівкою кур'єру, карткою при отриманні або онлайн."        /* ЗМІНИТИ */
+      },
+
+      texts: {
+        addBtn:"В кошик", currency:"грн",
+        cartTitle:"Ваше замовлення", emptyText:"Кошик поки порожній",
+        nameLabel:"Ваше ім'я", phoneLabel:"Телефон",
+        addrLabel:"Адреса доставки", commentLabel:"Коментар (необов'язково)",
+        submitBtn:"Замовити",
+        errName:"Вкажіть ім'я", errPhone:"Вкажіть коректний телефон",
+        successMsg:"Дякуємо! Замовлення прийнято, ми передзвонимо найближчим часом.",
+        sendErr:"Не вдалося відправити. Зателефонуйте нам, будь ласка."
+      },
+
+      /* посилання для блоку з картою: вставте src з Google Maps (Поділитися -> Вбудувати),
+         або лишіть "" — тоді замість карти буде показано адресу */
+      mapEmbed: "https://www.google.com/maps?q=Khreshchatyk+1,+Kyiv&z=16&output=embed", /* ЗМІНИТИ: підставлено адресу Хрещатик 1, Київ. Як вписати свою — ЧАСТИНА 3, пункт C */
+
+      colors: {
+        bg:"#101216", bgSoft:"#1B1F26", bgAlt:"#14171D",
+        text:"#F6F2EA", textMuted:"#A7ADB5",
+        accent:"#E8674A", accentDark:"#cf4f33", gold:"#D4B36F",
+        btnText:"#FFFFFF", border:"rgba(212,179,111,0.26)", field:"#0C0E11"
+      }
+    };
+    /* ===================== КІНЕЦЬ CONFIG ===================== */
+
+
+    var root=document.getElementById("sushi-block"), c=CONFIG.colors, t=CONFIG.texts;
+    var cm={"--s-bg":c.bg,"--s-bg-soft":c.bgSoft,"--s-bg-alt":c.bgAlt,"--s-text":c.text,
+      "--s-muted":c.textMuted,"--s-accent":c.accent,"--s-accent-d":c.accentDark,"--s-gold":c.gold,
+      "--s-btn-text":c.btnText,"--s-border":c.border,"--s-field":c.field};
+    for(var k in cm){ root.style.setProperty(k,cm[k]); }
+    function money(n){ return n.toLocaleString("uk-UA")+" "+t.currency; }
+    function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+    /* ---- ЗНИЖКА ДНЯ: стікер + банер + таймер до кінця дня ---- */
+    var P=CONFIG.promo||{enabled:false};
+    if(P.enabled){
+      var stick=document.getElementById("sushi-promo-sticker");
+      if(stick){ stick.querySelector(".sushi-sticker-num").textContent="-"+P.percent+"%"; stick.style.display="flex"; }
+      var bar=document.getElementById("sushi-promo-bar");
+      if(bar){
+        bar.style.display="flex";
+        document.getElementById("sushi-promo-text").innerHTML=
+          esc(P.label)+" <b>-"+P.percent+"%</b> на все меню · промокод <b>"+esc(P.code)+
+          "</b> · до кінця дня <span id=\"sushi-promo-timer\">00:00:00</span>";
+        var pad=function(x){return (x<10?"0":"")+x;};
+        var tEl=document.getElementById("sushi-promo-timer");
+        function tick(){
+          var now=new Date(), end=new Date(now.getFullYear(),now.getMonth(),now.getDate(),23,59,59);
+          var d=Math.max(0,Math.floor((end-now)/1000));
+          tEl.textContent=pad(Math.floor(d/3600))+":"+pad(Math.floor((d%3600)/60))+":"+pad(d%60);
+        }
+        tick(); setInterval(tick,1000);
+        var pc=document.getElementById("sushi-promo-close");
+        if(pc) pc.addEventListener("click",function(){ bar.style.display="none"; });
+      }
+    }
+
+    /* ---- шапка/бренд ---- */
+    document.getElementById("sushi-logo").textContent = CONFIG.brand.name;
+
+    /* ---- hero ---- */
+    var H=CONFIG.hero;
+    var heroBg=document.getElementById("sushi-hero-bg");
+    var heroOverlay='<div class="sushi-hero-shade"></div>';
+    if(H.videoMp4){
+      heroBg.innerHTML='<video class="sushi-hero-media" autoplay muted loop playsinline preload="auto" poster="'+H.bgImage+'"><source src="'+H.videoMp4+'" type="video/mp4"></video>'+heroOverlay;
+    } else if(H.youtubeId){
+      var yt="https://www.youtube.com/embed/"+H.youtubeId+"?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1&playlist="+H.youtubeId;
+      heroBg.innerHTML='<iframe class="sushi-hero-media sushi-hero-yt" src="'+yt+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'+heroOverlay;
+    } else {
+      heroBg.style.backgroundImage="url('"+H.bgImage+"')";
+      heroBg.innerHTML=heroOverlay;
+    }
+    document.getElementById("sushi-eyebrow").textContent=H.eyebrow;
+    document.getElementById("sushi-title").innerHTML=esc(H.title).replace(esc(H.accentWord),'<span class="sushi-accent-word">'+esc(H.accentWord)+'</span>');
+    document.getElementById("sushi-subtitle").textContent=H.subtitle;
+    document.getElementById("sushi-hero-btn1").textContent=H.btn1;
+    var b2=document.getElementById("sushi-hero-btn2"); b2.textContent=H.btn2; b2.setAttribute("href","tel:"+CONFIG.brand.phone);
+    document.getElementById("sushi-badges").innerHTML=H.badges.map(function(x){return '<li>'+esc(x)+'</li>';}).join("");
+
+    /* ---- переваги ---- */
+    var advIcons=[
+      '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c4-6 14-6 18 0-4 6-14 6-18 0z"></path><circle cx="16" cy="12" r="1"></circle></svg>',
+      '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>',
+      '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 22V7M12 7S9 2 6.5 3.5 8 7 12 7zM12 7s3-5 5.5-3.5S16 7 12 7z"></path></svg>',
+      '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg>'
+    ];
+    document.getElementById("sushi-adv").innerHTML=CONFIG.advantages.map(function(a,i){
+      return '<div class="sushi-adv-i sushi-reveal"><span class="sushi-adv-ic">'+(advIcons[i]||advIcons[0])+'</span>'+
+        '<div><h3>'+esc(a.title)+'</h3><p>'+esc(a.text)+'</p></div></div>';
+    }).join("");
+
+    /* ---- меню: табі ---- */
+    var tabsEl=document.getElementById("sushi-tabs");
+    tabsEl.innerHTML=CONFIG.categories.map(function(cat,i){
+      return '<button class="sushi-tab'+(i===0?' on':'')+'" data-cat="'+cat.id+'">'+esc(cat.label)+'</button>';
+    }).join("");
+
+    /* ---- меню: картки ---- */
+    var grid=document.getElementById("sushi-grid");
+    grid.innerHTML=CONFIG.products.map(function(p,i){
+      return '<article class="sushi-card sushi-reveal" data-cat="'+p.cat+'">'+
+        '<div class="sushi-card-img"><img loading="lazy" src="'+p.img+'" alt="'+esc(p.name)+'"></div>'+
+        '<div class="sushi-card-body"><h3 class="sushi-card-name">'+esc(p.name)+'</h3>'+
+        '<p class="sushi-card-desc">'+esc(p.desc)+'</p>'+
+        '<div class="sushi-card-foot"><span class="sushi-card-price">'+money(p.price)+'</span>'+
+        '<button class="sushi-btn sushi-btn-primary sushi-add" data-i="'+i+'">'+t.addBtn+'</button></div></div></article>';
+    }).join("");
+
+    tabsEl.addEventListener("click",function(e){
+      var b=e.target.closest(".sushi-tab"); if(!b) return;
+      tabsEl.querySelectorAll(".sushi-tab").forEach(function(x){x.classList.remove("on");});
+      b.classList.add("on");
+      var cat=b.getAttribute("data-cat");
+      grid.querySelectorAll(".sushi-card").forEach(function(card){
+        card.style.display=(cat==="all"||card.getAttribute("data-cat")===cat)?"":"none";
+      });
+    });
+
+    /* ---- доставка ---- */
+    var D=CONFIG.delivery;
+    document.getElementById("sushi-steps").innerHTML=D.steps.map(function(s,i){
+      return '<div class="sushi-step sushi-reveal"><span class="sushi-step-n">'+(i+1)+'</span>'+
+        '<h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p></div>';
+    }).join("");
+    document.getElementById("sushi-del-info").innerHTML=
+      '<div class="sushi-del-card"><strong>'+esc(D.freeFrom)+'</strong></div>'+
+      '<div class="sushi-del-card">'+esc(D.areas)+'</div>'+
+      '<div class="sushi-del-card">'+esc(D.pay)+'</div>';
+
+    /* ---- контакти ---- */
+    var B=CONFIG.brand;
+    document.getElementById("sushi-cont-list").innerHTML=
+      '<a class="sushi-cont-row" href="tel:'+B.phone+'"><span>Телефон</span><strong>'+esc(B.phoneText)+'</strong></a>'+
+      '<div class="sushi-cont-row"><span>Адреса</span><strong>'+esc(B.address)+'</strong></div>'+
+      '<div class="sushi-cont-row"><span>Графік</span><strong>'+esc(B.hours)+'</strong></div>';
+
+    var soc=CONFIG.social, socIcons={
+      instagram:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>',
+      telegram:'<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M21.9 4.3l-3 14.1c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7L18.3 6c.4-.3-.1-.5-.6-.2L7.4 12.3l-4.5-1.4c-1-.3-1-1 .2-1.4L20.7 3c.8-.3 1.5.2 1.2 1.3z"></path></svg>',
+      facebook:'<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"></path></svg>',
+      viber:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 4V5a1 1 0 0 1 1-1z"></path><path d="M9 9c1 2 3 4 5 5"></path></svg>'
+    };
+    var socHtml="";
+    ["instagram","telegram","facebook","viber"].forEach(function(key){
+      if(soc[key]) socHtml+='<a href="'+soc[key]+'" target="_blank" rel="noopener" aria-label="'+key+'">'+socIcons[key]+'</a>';
+    });
+    document.getElementById("sushi-social").innerHTML=socHtml;
+
+    document.getElementById("sushi-contacts-map").innerHTML = CONFIG.mapEmbed
+      ? '<iframe src="'+CONFIG.mapEmbed+'" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      : '<div class="sushi-map-fallback"><span>'+esc(B.address)+'</span></div>';
+
+    document.getElementById("sushi-footer").innerHTML=
+      '<span>'+esc(B.name)+' &copy; '+(new Date().getFullYear())+'. Всі права захищено.</span>';
+
+    /* ---- плавний скрол по якорях ---- */
+    document.querySelectorAll('#sushi-block a[href^="#sushi-"]').forEach(function(a){
+      a.addEventListener("click",function(e){
+        var id=a.getAttribute("href"); var tg=document.querySelector(id);
+        if(tg){ e.preventDefault(); tg.scrollIntoView({behavior:"smooth",block:"start"}); }
+      });
+    });
+
+    /* ---- телефон: на мобільному дзвонить, на ПК копіює номер ---- */
+    document.querySelectorAll('#sushi-block a[href^="tel:"]').forEach(function(a){
+      a.addEventListener("click",function(){
+        try{ if(navigator.clipboard) navigator.clipboard.writeText(CONFIG.brand.phone); }catch(e){}
+        showToast("Телефон " + CONFIG.brand.phoneText + " скопійовано", 2500);
+      });
+    });
+
+    /* ============================================================
+       КОШИК + ФОРМА + TELEGRAM (виносимо в body)
+       ============================================================ */
+    var floatBtn=document.createElement("button");
+    floatBtn.className="sushi-float"; floatBtn.setAttribute("aria-label","Кошик");
+    floatBtn.innerHTML='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle><path d="M2 3h3l2.4 12.4a1.5 1.5 0 0 0 1.5 1.2h8.7a1.5 1.5 0 0 0 1.5-1.2L22 7H6"></path></svg><span class="sushi-float-sum" id="sushi-float-sum"></span><span class="sushi-float-count" id="sushi-float-count">0</span>';
+    document.body.appendChild(floatBtn);
+
+    var overlay=document.createElement("div"); overlay.className="sushi-overlay"; document.body.appendChild(overlay);
+
+    var cartEl=document.createElement("aside"); cartEl.className="sushi-cart";
+    cartEl.innerHTML=
+      '<div class="sushi-cart-top"><h3 class="sushi-cart-h">'+t.cartTitle+'</h3>'+
+      '<button class="sushi-cart-close" id="sushi-cart-close" aria-label="Закрити"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>'+
+      '<div class="sushi-cart-items" id="sushi-cart-items"></div>'+
+      '<div class="sushi-cart-empty" id="sushi-cart-empty">'+t.emptyText+'</div>'+
+      '<div class="sushi-cart-foot" id="sushi-cart-foot">'+
+        '<div class="sushi-cart-disc" id="sushi-cart-disc" style="display:none"><span></span><span id="sushi-cart-disc-val"></span></div>'+
+        '<div class="sushi-cart-total"><span>Разом</span><span id="sushi-cart-total-val">0</span></div>'+
+        '<div class="sushi-form">'+
+          '<label>'+t.nameLabel+' *<input type="text" id="sushi-f-name" autocomplete="name"><small id="sushi-e-name"></small></label>'+
+          '<label>'+t.phoneLabel+' *<input type="tel" id="sushi-f-phone" autocomplete="tel" inputmode="tel"><small id="sushi-e-phone"></small></label>'+
+          '<label>'+t.addrLabel+'<input type="text" id="sushi-f-addr" autocomplete="street-address"></label>'+
+          '<label>'+t.commentLabel+'<input type="text" id="sushi-f-comment"></label>'+
+        '</div>'+
+        '<button class="sushi-btn sushi-btn-primary sushi-btn-block" id="sushi-submit">'+t.submitBtn+'</button>'+
+      '</div>';
+    document.body.appendChild(cartEl);
+
+    var toast=document.createElement("div"); toast.className="sushi-toast"; document.body.appendChild(toast);
+
+    var cart={};
+    var navCount=document.getElementById("sushi-nav-count");
+    var fCount=document.getElementById("sushi-float-count"), fSum=document.getElementById("sushi-float-sum");
+    var elItems=document.getElementById("sushi-cart-items"), elEmpty=document.getElementById("sushi-cart-empty");
+    var elFoot=document.getElementById("sushi-cart-foot"), elTotal=document.getElementById("sushi-cart-total-val");
+    var elDisc=document.getElementById("sushi-cart-disc"), elDiscVal=document.getElementById("sushi-cart-disc-val");
+
+    function totalCount(){var n=0;for(var k in cart)n+=cart[k];return n;}
+    function totalSum(){var s=0;for(var k in cart)s+=CONFIG.products[k].price*cart[k];return s;}
+    function discountVal(){ var p=CONFIG.promo; if(!p||!p.enabled||!totalCount()) return 0; return Math.round(totalSum()*p.percent/100); }
+    function finalSum(){ return totalSum()-discountVal(); }
+    function renderCart(){
+      var n=totalCount(),sum=totalSum();
+      navCount.textContent=n; navCount.classList.toggle("on",n>0);
+      fCount.textContent=n; fSum.textContent=n>0?money(finalSum()):""; floatBtn.classList.toggle("has",n>0);
+      elItems.innerHTML="";
+      var keys=Object.keys(cart);
+      if(!keys.length){elEmpty.style.display="block";elFoot.style.display="none";return;}
+      elEmpty.style.display="none";elFoot.style.display="block";
+      keys.forEach(function(k){
+        var p=CONFIG.products[k],row=document.createElement("div"); row.className="sushi-ci";
+        row.innerHTML='<img src="'+p.img+'" alt="'+esc(p.name)+'"><div class="sushi-ci-info"><span class="sushi-ci-name">'+esc(p.name)+'</span><span class="sushi-ci-price">'+money(p.price)+'</span></div><div class="sushi-qty"><button class="sushi-q" data-act="dec" data-i="'+k+'">-</button><span>'+cart[k]+'</span><button class="sushi-q" data-act="inc" data-i="'+k+'">+</button></div>';
+        elItems.appendChild(row);
+      });
+      var dsc=discountVal();
+      if(elDisc){
+        if(dsc>0){
+          elDisc.style.display="flex";
+          elDisc.querySelector("span").textContent=(CONFIG.promo.label||"Знижка")+" (-"+CONFIG.promo.percent+"%)";
+          if(elDiscVal) elDiscVal.textContent="-"+money(dsc);
+        } else { elDisc.style.display="none"; }
+      }
+      elTotal.textContent=money(finalSum());
+    }
+    function popFloat(){floatBtn.classList.remove("pop");void floatBtn.offsetWidth;floatBtn.classList.add("pop");}
+    var tt; function showToast(m,ms){toast.textContent=m;toast.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove("on");},ms||1800);}
+
+    grid.addEventListener("click",function(e){
+      var b=e.target.closest(".sushi-add"); if(!b) return;
+      var i=b.getAttribute("data-i"); cart[i]=(cart[i]||0)+1; renderCart(); popFloat(); showToast(CONFIG.products[i].name+" — додано");
+    });
+    elItems.addEventListener("click",function(e){
+      var b=e.target.closest(".sushi-q"); if(!b) return;
+      var i=b.getAttribute("data-i"),act=b.getAttribute("data-act");
+      if(act==="inc")cart[i]++; else {cart[i]--; if(cart[i]<=0)delete cart[i];}
+      renderCart();
+    });
+    function openCart(){cartEl.classList.add("on");overlay.classList.add("on");}
+    function closeCart(){cartEl.classList.remove("on");overlay.classList.remove("on");}
+    document.getElementById("sushi-cart-open-top").addEventListener("click",openCart);
+    floatBtn.addEventListener("click",openCart);
+    document.getElementById("sushi-cart-close").addEventListener("click",closeCart);
+    overlay.addEventListener("click",closeCart);
+
+    var submitBtn=document.getElementById("sushi-submit");
+    var fName=document.getElementById("sushi-f-name"),fPhone=document.getElementById("sushi-f-phone");
+    var fAddr=document.getElementById("sushi-f-addr"),fComm=document.getElementById("sushi-f-comment");
+    var eName=document.getElementById("sushi-e-name"),ePhone=document.getElementById("sushi-e-phone");
+    function digits(s){return (s.match(/\d/g)||[]).length;}
+    function validate(){
+      var ok=true;
+      if(fName.value.trim().length<2){eName.textContent=t.errName;fName.classList.add("err");ok=false;} else {eName.textContent="";fName.classList.remove("err");}
+      if(digits(fPhone.value)<9){ePhone.textContent=t.errPhone;fPhone.classList.add("err");ok=false;} else {ePhone.textContent="";fPhone.classList.remove("err");}
+      return ok;
+    }
+    fName.addEventListener("input",function(){if(fName.classList.contains("err"))validate();});
+    fPhone.addEventListener("input",function(){if(fPhone.classList.contains("err"))validate();});
+    function buildMessage(){
+      var l=["<b>Нове замовлення</b> ("+CONFIG.brand.name+")",""];
+      Object.keys(cart).forEach(function(k){var p=CONFIG.products[k];l.push("- "+p.name+" x"+cart[k]+" = "+money(p.price*cart[k]));});
+      var dsc=discountVal();
+      if(dsc>0){
+        l.push("","Сума: "+money(totalSum()),CONFIG.promo.label+" (-"+CONFIG.promo.percent+"%): -"+money(dsc),"<b>До сплати: "+money(finalSum())+"</b>","");
+      } else {
+        l.push("","<b>Разом: "+money(totalSum())+"</b>","");
+      }
+      l.push("Ім'я: "+fName.value.trim()); l.push("Телефон: "+fPhone.value.trim());
+      if(fAddr.value.trim())l.push("Адреса: "+fAddr.value.trim());
+      if(fComm.value.trim())l.push("Коментар: "+fComm.value.trim());
+      return l.join("\n");
+    }
+    submitBtn.addEventListener("click",function(){
+      if(!totalCount())return; if(!validate())return;
+      var tg=CONFIG.telegram; submitBtn.disabled=true;
+      function done(){cart={};renderCart();fName.value=fPhone.value=fAddr.value=fComm.value="";closeCart();submitBtn.disabled=false;showToast(t.successMsg,4000);}
+      function fail(){submitBtn.disabled=false;showToast(t.sendErr,4000);}
+      if(!tg.token||!tg.chatId){console.warn("[sushi] Telegram не налаштовано: token/chatId у CONFIG.telegram");done();return;}
+      fetch("https://api.telegram.org/bot"+tg.token+"/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({chat_id:tg.chatId,text:buildMessage(),parse_mode:"HTML"})})
+        .then(function(r){return r.json();}).then(function(d){if(d&&d.ok)done();else fail();}).catch(fail);
+    });
+
+    renderCart();
+
+    /* reveal */
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var items=document.querySelectorAll(".sushi-reveal");
+    if(reduce||!("IntersectionObserver" in window)){items.forEach(function(el){el.classList.add("in");});}
+    else{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}});},{threshold:.12});items.forEach(function(el){io.observe(el);});}
+
+    /* SEO JSON-LD */
+    var jl={"@context":"https://schema.org","@type":"Restaurant","name":CONFIG.brand.name,
+      "servesCuisine":"Японська кухня, суші","telephone":CONFIG.brand.phone,
+      "address":{"@type":"PostalAddress","streetAddress":CONFIG.brand.address,"addressLocality":CONFIG.brand.city},
+      "openingHours":CONFIG.brand.hours,
+      "hasMenu":{"@type":"Menu","hasMenuSection":CONFIG.categories.filter(function(x){return x.id!=="all";}).map(function(cat){
+        return {"@type":"MenuSection","name":cat.label,"hasMenuItem":CONFIG.products.filter(function(p){return p.cat===cat.id;}).map(function(p){
+          return {"@type":"MenuItem","name":p.name,"description":p.desc,"offers":{"@type":"Offer","price":p.price,"priceCurrency":"UAH"}};})};})}};
+    document.getElementById("sushi-jsonld").textContent=JSON.stringify(jl);
+
+  })();
+  </script>
+
+  <style>
+  #sushi-block{
+    --s-bg:#101216;--s-bg-soft:#1B1F26;--s-bg-alt:#14171D;--s-text:#F6F2EA;--s-muted:#A7ADB5;
+    --s-accent:#E8674A;--s-accent-d:#cf4f33;--s-gold:#D4B36F;--s-btn-text:#FFF;
+    --s-border:rgba(212,179,111,0.26);--s-field:#0C0E11;
+    background:var(--s-bg);color:var(--s-text);font-family:"Manrope",-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.5;border-radius:18px;overflow:hidden;position:relative;}
+  #sushi-block *{box-sizing:border-box;}
+  #sushi-block img{display:block;max-width:100%;}
+  #sushi-block h1,#sushi-block h2,#sushi-block h3{margin:0;}
+
+  /* nav */
+  #sushi-block .sushi-nav{position:relative;z-index:5;display:flex;align-items:center;gap:24px;
+    padding:18px 34px;border-bottom:1px solid var(--s-border);background:rgba(10,11,14,.6);}
+  #sushi-block .sushi-logo{font-family:"Cormorant",serif;font-weight:700;font-size:26px;letter-spacing:.06em;}
+  #sushi-block .sushi-nav-links{display:flex;gap:26px;margin-left:auto;}
+  #sushi-block .sushi-nav-links a{color:var(--s-text)!important;text-decoration:none;font-size:15px;font-weight:500;opacity:.85;transition:.2s;}
+  #sushi-block .sushi-nav-links a:hover{opacity:1;color:var(--s-accent)!important;}
+  #sushi-block .sushi-nav-cart{display:flex;align-items:center;gap:8px;background:var(--s-accent);color:var(--s-btn-text);
+    border:none;cursor:pointer;padding:9px 16px;border-radius:30px;font-family:"Manrope",sans-serif;font-weight:600;font-size:14px;transition:.25s;}
+  #sushi-block .sushi-nav-cart:hover{background:var(--s-accent-d);transform:translateY(-1px);}
+  #sushi-block .sushi-nav-count{background:rgba(0,0,0,.35);min-width:20px;height:20px;border-radius:20px;font-size:12px;
+    display:inline-flex;align-items:center;justify-content:center;padding:0 5px;opacity:.6;}
+  #sushi-block .sushi-nav-count.on{opacity:1;}
+
+  /* hero */
+  #sushi-block .sushi-hero{position:relative;padding:96px 34px 80px;overflow:hidden;}
+  #sushi-block .sushi-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0;overflow:hidden;}
+  #sushi-block .sushi-hero-media{position:absolute;top:50%;left:50%;width:100%;height:100%;object-fit:cover;transform:translate(-50%,-50%);}
+  #sushi-block .sushi-hero-yt{width:177.78vh;min-width:100%;height:56.25vw;min-height:100%;pointer-events:none;border:0;}
+  #sushi-block .sushi-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,22,.55),rgba(16,18,22,.92));z-index:1;}
+  #sushi-block .sushi-hero-inner{position:relative;z-index:1;max-width:640px;}
+  #sushi-block .sushi-eyebrow{display:inline-block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--s-gold);margin-bottom:18px;}
+  #sushi-block .sushi-title{font-family:"Cormorant",serif;font-weight:600;font-size:64px;line-height:1.04;margin-bottom:20px;}
+  #sushi-block .sushi-accent-word{color:var(--s-accent);}
+  #sushi-block .sushi-subtitle{font-size:19px;color:#e9e4da;max-width:540px;margin-bottom:30px;}
+  #sushi-block .sushi-hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px;}
+  #sushi-block .sushi-badges{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;}
+  #sushi-block .sushi-badges li{font-size:13px;font-weight:600;color:var(--s-text);background:rgba(255,255,255,.08);
+    border:1px solid var(--s-border);padding:7px 14px;border-radius:30px;}
+
+  /* кнопки */
+  #sushi-block .sushi-btn{display:inline-flex;align-items:center;justify-content:center;font-family:"Manrope",sans-serif;
+    font-weight:600;font-size:15px;padding:14px 30px;border-radius:40px;cursor:pointer;text-decoration:none;border:1px solid transparent;transition:.2s;}
+  #sushi-block .sushi-btn-primary{background:var(--s-accent);color:var(--s-btn-text)!important;box-shadow:0 8px 22px rgba(232,103,74,.3);}
+  #sushi-block .sushi-btn-primary:hover{background:var(--s-accent-d);transform:translateY(-2px);}
+  #sushi-block .sushi-btn-ghost{background:transparent;color:var(--s-text)!important;border-color:var(--s-border);}
+  #sushi-block .sushi-btn-ghost:hover{border-color:var(--s-accent);color:var(--s-accent)!important;}
+  #sushi-block .sushi-btn-block{width:100%;margin-top:16px;}
+
+  /* переваги */
+  #sushi-block .sushi-adv{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:46px 34px;background:var(--s-bg-alt);border-bottom:1px solid var(--s-border);}
+  #sushi-block .sushi-adv-i{display:flex;gap:14px;align-items:flex-start;}
+  #sushi-block .sushi-adv-ic{flex-shrink:0;width:48px;height:48px;border-radius:12px;background:rgba(232,103,74,.12);color:var(--s-accent);display:flex;align-items:center;justify-content:center;}
+  #sushi-block .sushi-adv-i h3{font-size:16px;margin-bottom:4px;}
+  #sushi-block .sushi-adv-i p{font-size:13px;color:var(--s-muted);}
+
+  /* секції загальне */
+  #sushi-block .sushi-sec-head{margin-bottom:28px;}
+  #sushi-block .sushi-sec-title{font-family:"Cormorant",serif;font-weight:600;font-size:40px;margin-top:6px;}
+  #sushi-block .sushi-menu{padding:64px 34px;}
+
+  /* табі */
+  #sushi-block .sushi-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;}
+  #sushi-block .sushi-tab{background:transparent;border:1px solid var(--s-border);color:var(--s-text);
+    padding:9px 20px;border-radius:30px;cursor:pointer;font-family:"Manrope",sans-serif;font-weight:600;font-size:14px;transition:.2s;}
+  #sushi-block .sushi-tab:hover{border-color:var(--s-accent);}
+  #sushi-block .sushi-tab.on{background:var(--s-accent);border-color:var(--s-accent);color:var(--s-btn-text);}
+
+  /* картки */
+  #sushi-block .sushi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  #sushi-block .sushi-card{background:var(--s-bg-soft);border:1px solid var(--s-border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s,border-color .35s;}
+  #sushi-block .sushi-card:hover{transform:translateY(-6px);border-color:var(--s-accent);box-shadow:0 18px 40px rgba(0,0,0,.45);}
+  #sushi-block .sushi-card-img{aspect-ratio:1/1;overflow:hidden;}
+  #sushi-block .sushi-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+  #sushi-block .sushi-card:hover .sushi-card-img img{transform:scale(1.07);}
+  #sushi-block .sushi-card-body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1;}
+  #sushi-block .sushi-card-name{font-family:"Cormorant",serif;font-weight:600;font-size:21px;margin-bottom:5px;}
+  #sushi-block .sushi-card-desc{font-size:13px;color:var(--s-muted);margin-bottom:16px;flex:1;}
+  #sushi-block .sushi-card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+  #sushi-block .sushi-card-price{font-size:19px;font-weight:700;color:var(--s-accent);white-space:nowrap;}
+  #sushi-block .sushi-add{padding:9px 18px;font-size:14px;}
+
+  /* доставка */
+  #sushi-block .sushi-delivery{padding:64px 34px;background:var(--s-bg-alt);border-top:1px solid var(--s-border);border-bottom:1px solid var(--s-border);}
+  #sushi-block .sushi-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:30px;}
+  #sushi-block .sushi-step{background:var(--s-bg-soft);border:1px solid var(--s-border);border-radius:16px;padding:26px 24px;}
+  #sushi-block .sushi-step-n{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--s-accent);color:var(--s-btn-text);font-weight:800;font-size:18px;margin-bottom:14px;}
+  #sushi-block .sushi-step h3{font-size:18px;margin-bottom:6px;}
+  #sushi-block .sushi-step p{font-size:14px;color:var(--s-muted);}
+  #sushi-block .sushi-del-info{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  #sushi-block .sushi-del-card{background:transparent;border:1px dashed var(--s-border);border-radius:14px;padding:18px 20px;font-size:14px;color:var(--s-muted);}
+  #sushi-block .sushi-del-card strong{color:var(--s-gold);font-size:15px;}
+
+  /* контакти */
+  #sushi-block .sushi-contacts{padding:64px 34px;}
+  #sushi-block .sushi-contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  #sushi-block .sushi-cont-list{margin:22px 0;display:flex;flex-direction:column;gap:2px;}
+  #sushi-block .sushi-cont-row{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--s-border);text-decoration:none;color:var(--s-text)!important;}
+  #sushi-block .sushi-cont-row span{color:var(--s-muted);font-size:14px;}
+  #sushi-block .sushi-cont-row strong{font-size:15px;text-align:right;}
+  #sushi-block a.sushi-cont-row:hover strong{color:var(--s-accent);}
+  #sushi-block .sushi-social{display:flex;gap:12px;margin-top:6px;}
+  #sushi-block .sushi-social a{width:44px;height:44px;border-radius:50%;border:1px solid var(--s-border);display:flex;align-items:center;justify-content:center;color:var(--s-text)!important;transition:.2s;}
+  #sushi-block .sushi-social a:hover{border-color:var(--s-accent);color:var(--s-accent)!important;transform:translateY(-2px);}
+  #sushi-block .sushi-contacts-map{border-radius:16px;overflow:hidden;border:1px solid var(--s-border);min-height:300px;}
+  #sushi-block .sushi-contacts-map iframe{width:100%;height:100%;min-height:300px;border:0;display:block;}
+  #sushi-block .sushi-map-fallback{height:100%;min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:var(--s-bg-soft);color:var(--s-muted);font-size:16px;}
+
+  /* footer */
+  #sushi-block .sushi-footer{padding:28px 34px;text-align:center;border-top:1px solid var(--s-border);color:var(--s-muted);font-size:13px;background:var(--s-bg-alt);}
+
+  /* reveal */
+  #sushi-block .sushi-reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;}
+  #sushi-block .sushi-reveal.in{opacity:1;transform:none;}
+
+  /* ---- плаваючі (body) ---- */
+  .sushi-float{position:fixed;right:22px;bottom:22px;z-index:99998;display:flex;align-items:center;gap:10px;background:#E8674A;color:#fff;border:none;padding:14px 18px;border-radius:40px;cursor:pointer;font-family:"Manrope",sans-serif;font-weight:700;font-size:15px;box-shadow:0 12px 30px rgba(0,0,0,.35);transition:.2s;}
+  .sushi-float:hover{background:#cf4f33;transform:translateY(-2px);}
+  .sushi-float.pop{animation:sushiPop .35s ease;}
+  @keyframes sushiPop{0%{transform:scale(1);}40%{transform:scale(1.12);}100%{transform:scale(1);}}
+  .sushi-float-sum{display:none;} .sushi-float.has .sushi-float-sum{display:inline;}
+  .sushi-float-count{background:rgba(0,0,0,.3);min-width:22px;height:22px;border-radius:20px;font-size:12px;display:inline-flex;align-items:center;justify-content:center;padding:0 6px;}
+  .sushi-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;visibility:hidden;transition:.3s;z-index:99999;}
+  .sushi-overlay.on{opacity:1;visibility:visible;}
+  .sushi-cart{position:fixed;top:0;right:0;height:100%;width:400px;max-width:92vw;background:#1B1F26;color:#F6F2EA;z-index:100000;transform:translateX(110%);transition:transform .35s cubic-bezier(.4,.8,.2,1);display:flex;flex-direction:column;box-shadow:-20px 0 50px rgba(0,0,0,.5);font-family:"Manrope",sans-serif;}
+  .sushi-cart.on{transform:translateX(0);}
+  .sushi-cart-top{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;border-bottom:1px solid rgba(212,179,111,0.26);}
+  .sushi-cart-h{font-family:"Cormorant",serif;font-size:24px;margin:0;}
+  .sushi-cart-close{background:transparent;border:none;color:#F6F2EA;cursor:pointer;}
+  .sushi-cart-items{flex:1 1 auto;min-height:0;overflow-y:auto;padding:8px 24px;}
+  .sushi-cart-empty{padding:40px 24px;text-align:center;color:#A7ADB5;}
+  .sushi-ci{display:flex;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(212,179,111,0.26);}
+  .sushi-ci img{width:54px;height:54px;border-radius:10px;object-fit:cover;}
+  .sushi-ci-info{flex:1;display:flex;flex-direction:column;gap:2px;}
+  .sushi-ci-name{font-size:14px;font-weight:600;} .sushi-ci-price{font-size:13px;color:#E8674A;}
+  .sushi-qty{display:flex;align-items:center;gap:10px;}
+  .sushi-q{width:26px;height:26px;border-radius:50%;border:1px solid rgba(212,179,111,0.26);background:transparent;color:#F6F2EA;cursor:pointer;font-size:16px;line-height:1;transition:.2s;}
+  .sushi-q:hover{border-color:#E8674A;color:#E8674A;}
+  /* кнопки в кошику (кошик винесено в body, тому стилі .sushi-btn з #sushi-block сюди не діють) */
+  .sushi-cart .sushi-btn{display:inline-flex;align-items:center;justify-content:center;font-family:"Manrope",sans-serif;font-weight:700;font-size:15px;padding:15px 28px;border-radius:40px;cursor:pointer;border:1px solid transparent;text-decoration:none;transition:.2s;}
+  .sushi-cart .sushi-btn-primary{background:#E8674A;color:#fff!important;box-shadow:0 8px 22px rgba(232,103,74,.3);}
+  .sushi-cart .sushi-btn-primary:hover{background:#cf4f33;transform:translateY(-1px);}
+  .sushi-cart .sushi-btn-primary:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+  .sushi-cart .sushi-btn-block{width:100%;margin-top:16px;}
+  .sushi-cart-foot{flex:0 0 auto;padding:18px 24px 24px;border-top:1px solid rgba(212,179,111,0.26);}
+  .sushi-cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:700;margin-bottom:14px;}
+  .sushi-form{display:flex;flex-direction:column;gap:12px;}
+  .sushi-form label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#A7ADB5;}
+  .sushi-form input{background:#0C0E11;border:1px solid rgba(212,179,111,0.26);border-radius:10px;padding:11px 13px;color:#F6F2EA;font-size:15px;font-family:"Manrope",sans-serif;outline:none;transition:border-color .2s;}
+  .sushi-form input:focus{border-color:#E8674A;} .sushi-form input.err{border-color:#ff5a5a;}
+  .sushi-form small{color:#ff7a7a;font-size:12px;} .sushi-form small:empty{display:none;}
+  .sushi-toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,30px);background:#F6F2EA;color:#101216;padding:13px 24px;border-radius:40px;font-size:14px;font-weight:600;max-width:90vw;text-align:center;opacity:0;visibility:hidden;transition:.3s;z-index:100001;box-shadow:0 10px 30px rgba(0,0,0,.3);font-family:"Manrope",sans-serif;}
+  .sushi-toast.on{opacity:1;visibility:visible;transform:translate(-50%,0);}
+
+  /* адаптив */
+  @media (max-width:1100px){
+    #sushi-block .sushi-grid{grid-template-columns:repeat(3,1fr);}
+    #sushi-block .sushi-adv{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:900px){
+    #sushi-block .sushi-nav-links{display:none;}
+    #sushi-block .sushi-title{font-size:48px;}
+    #sushi-block .sushi-hero{padding:64px 24px 56px;}
+    #sushi-block .sushi-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
+    #sushi-block .sushi-steps,#sushi-block .sushi-del-info{grid-template-columns:1fr;}
+    #sushi-block .sushi-contacts-grid{grid-template-columns:1fr;gap:28px;}
+    #sushi-block .sushi-menu,#sushi-block .sushi-delivery,#sushi-block .sushi-contacts{padding:48px 24px;}
+    #sushi-block .sushi-adv{padding:36px 24px;}
+    #sushi-block .sushi-nav{padding:16px 24px;}
+  }
+  @media (max-width:560px){
+    #sushi-block .sushi-grid{grid-template-columns:1fr;}
+    #sushi-block .sushi-adv{grid-template-columns:1fr;}
+    #sushi-block .sushi-title{font-size:40px;}
+    #sushi-block .sushi-sec-title{font-size:32px;}
+    #sushi-block .sushi-subtitle{font-size:16px;}
+    #sushi-block .sushi-nav-cart-txt{display:none;}
+    #sushi-block .sushi-menu,#sushi-block .sushi-delivery,#sushi-block .sushi-contacts{padding:42px 20px;}
+    #sushi-block .sushi-hero{padding:52px 20px 44px;}
+    #sushi-block .sushi-nav{padding:14px 18px;}
+    .sushi-cart{width:100%;} .sushi-float{right:16px;bottom:16px;}
+  }
+  /* ---- ЗНИЖКА ДНЯ: банер ---- */
+  .sushi-promo-bar{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:center;gap:12px;
+    padding:11px 46px 11px 20px;color:#241008;font-family:"Manrope",sans-serif;font-weight:700;font-size:14px;text-align:center;
+    background:linear-gradient(90deg,#E8674A,#D4B36F,#E8674A);background-size:200% 100%;
+    animation:sushiBarFlow 7s linear infinite;overflow:hidden;}
+  @keyframes sushiBarFlow{0%{background-position:0 0}100%{background-position:200% 0}}
+  .sushi-promo-bar b{font-weight:800;}
+  .sushi-promo-bar #sushi-promo-timer{font-variant-numeric:tabular-nums;background:rgba(0,0,0,.2);padding:2px 8px;border-radius:6px;letter-spacing:.04em;}
+  .sushi-promo-shine{position:absolute;top:0;left:-45%;width:45%;height:100%;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);animation:sushiShine 3.6s ease-in-out infinite;}
+  @keyframes sushiShine{0%{left:-45%}55%,100%{left:125%}}
+  .sushi-promo-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.18);border:none;
+    color:#241008;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:17px;line-height:1;display:flex;align-items:center;justify-content:center;}
+  .sushi-promo-close:hover{background:rgba(0,0,0,.32);}
+
+  /* ---- ЗНИЖКА ДНЯ: стікер у hero ---- */
+  #sushi-block .sushi-promo-sticker{position:absolute;top:84px;right:30px;z-index:3;width:110px;height:110px;
+    display:none;align-items:center;justify-content:center;filter:drop-shadow(0 12px 26px rgba(232,103,74,.55));
+    animation:sushiStickPulse 2.6s ease-in-out infinite;}
+  @keyframes sushiStickPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+  #sushi-block .sushi-promo-sticker::before{content:"";position:absolute;inset:0;border-radius:50%;
+    background:radial-gradient(circle at 34% 28%,#F4885F,#E8674A 58%,#cf4f33);}
+  #sushi-block .sushi-sticker-spin{position:absolute;inset:0;width:100%;height:100%;animation:sushiStickSpin 9s linear infinite;}
+  @keyframes sushiStickSpin{to{transform:rotate(360deg)}}
+  #sushi-block .sushi-sticker-txt{font-family:"Manrope",sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;fill:#FCEFE6;}
+  #sushi-block .sushi-sticker-num{position:relative;z-index:1;font-family:"Cormorant",serif;font-weight:700;font-size:28px;color:#fff;line-height:1;}
+  @media (max-width:900px){
+    #sushi-block .sushi-promo-sticker{width:96px;height:96px;top:18px;right:18px;}
+    #sushi-block .sushi-sticker-num{font-size:24px;}
+    #sushi-block .sushi-sticker-txt{font-size:10px;}
+    #sushi-block .sushi-hero-inner{padding-top:56px;}
+  }
+  @media (max-width:560px){
+    #sushi-block .sushi-promo-sticker{width:80px;height:80px;top:14px;right:14px;}
+    #sushi-block .sushi-sticker-num{font-size:20px;}
+    .sushi-promo-bar{font-size:12px;padding:9px 40px 9px 14px;gap:8px;}
+  }
+
+  /* ---- ЗНИЖКА ДНЯ: рядок у кошику ---- */
+  .sushi-cart-disc{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:#D4B36F;font-weight:700;margin-bottom:8px;}
+  .sushi-cart-disc span:first-child{color:#A7ADB5;font-weight:600;}
+
+  @media (prefers-reduced-motion: reduce){
+    .sushi-promo-bar,.sushi-promo-shine,.sushi-promo-sticker,.sushi-sticker-spin{animation:none!important;}
+    #sushi-block *,.sushi-float,.sushi-cart{animation:none!important;transition:none!important;}
+    #sushi-block .sushi-reveal{opacity:1;transform:none;}
+  }
+  </style>
+
+</div>
+
+</body>
+</html>
